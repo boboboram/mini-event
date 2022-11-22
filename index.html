@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebConf</title>
+    <meta name="description" content="웹사이트 제작 설명회 온라인 개최" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/destyle.css@1.0.5/destyle.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <a class="logo" href="#hero">WebConf</a>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#ticket">Ticket</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="wrapper">
+        <h1>WebConf ASIA</h1>
+        <p class="hero-date">2022. 12. 7. 14:00 - 16:00KST</p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          neque deleniti voluptatibus perferendis suscipit dolor a alias.
+          Accusantium quasi officiis, consequatur velit excepturi minus nobis
+          dolorum nam cum sequi similique.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="wrapper">
+      <h2>ABOUT</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia
+        repellat dolorum numquam quam tempore veritatis nostrum commodi eos hic
+        doloremque sint odit dolor praesentium deleniti ipsa quibusdam inventore
+        neque. Voluptas amet tempore enim deserunt? Dolor necessitatibus cum,
+        voluptate modi accusamus voluptatem voluptates perspiciatis quos
+        suscipit optio aliquid laboriosam, iure deserunt hic repellendus?
+        Necessitatibus dolore similique cumque reiciendis laudantium tempore.
+        At, ipsam consequuntur dicta odit fuga deserunt distinctio nostrum,
+        reprehenderit perferendis, obcaecati eius harum quis hic aliquid unde
+        repellat animi? Tempora totam voluptas, nobis voluptatum pariatur iure.
+        Tempore, exercitationem nemo.
+      </p>
+      <img src="./images/computer.jpg" alt="컴퓨터 사진" />
+    </section>
+
+    <section id="news">
+      <h2>NEWS</h2>
+      <div class="wrapper">
+        <table class="news-table">
+          <tr>
+            <td class="news-date">2022.12.00</td>
+            <td class="news-content">참가 신청을 시작합니다</td>
+          </tr>
+          <tr>
+            <td class="news-date">2022.12.00</td>
+            <td class="news-content">발표자가 결정되었습니다</td>
+          </tr>
+          <tr>
+            <td class="news-date">2022.12.00</td>
+            <td class="news-content">웹사이트가 리뉴얼되었습니다</td>
+          </tr>
+          <tr>
+            <td class="news-date">2022.12.00</td>
+            <td class="news-content">개최 결정</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="speakers" class="wrapper">
+      <h2>SPEAKERS</h2>
+      <div class="speakers-list">
+        <div class="speakers-text">
+          <h3>Kim Jongsun</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+            incidunt nisi illum laudantium provident a ut eaque adipisci quos
+            cumque at ipsa eius quidem, ipsam non molestias obcaecati
+            repudiandae esse.
+          </p>
+        </div>
+        <img src="./images/speaker1.jpg" alt="Mana" />
+      </div>
+      <div class="speakers-list">
+        <div class="speakers-text">
+          <h3>Kwon Hyuksoo</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis temporibus nihil deserunt modi eaque a obcaecati minima
+            tempora, corporis, ipsum pariatur veritatis. Quo dolorum ullam
+            assumenda eligendi cumque sequi mollitia?
+          </p>
+        </div>
+        <img src="./images/speaker2.jpg" alt="Tatsuya" />
+      </div>
+    </section>
+
+    <section id="ticket">
+      <h2>TICKET</h2>
+      <form class="ticket-form" action="#">
+        <label>Name</label>
+        <input class="ticket-field" type="text" placeholder="예 : 김ㅇㅇ" />
+        <label>Email</label>
+        <input
+          class="ticket-field"
+          type="email"
+          placeholder="예 : hello@example.com"
+        />
+        <input class="ticket-btn" type="submit" value="Join Now!" />
+      </form>
+
+      <div class="footer wrapper">
+        <p>
+          <a href="mailto:info@example.com">문의사항</a>
+          <small>&copy; 2022 WebConf</small>
+        </p>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
