@@ -1,4 +1,20 @@
 /*
+COLOR
+================================================ */
+:root {
+  --light-blue: #4db1ec;
+  --blue: #1665cc;
+  --purple: #b473bf;
+  --pink: #ffb2c1;
+  --orange: #ff9f67;
+  --yellow: #ffd673;
+  --light-green: #a2e29b;
+  --green: #00a2af;
+  --grey: #333;
+  --white: #fff;
+}
+
+/*
 GENERAL STYLING
 ================================================ */
 html {
@@ -7,7 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: #333;
+  color: var(--grey);
   font-family: "Roboto", "Noto Sans KR", sans-serif;
 }
 
@@ -41,7 +57,7 @@ h2 {
 HEADER
 ================================================ */
 header {
-  background-color: #333;
+  background-color: var(--grey);
   padding: 1rem 0;
   /* 헤더 고정 */
   position: fixed;
@@ -53,21 +69,80 @@ header .wrapper {
   justify-content: space-between;
 }
 header a {
-  color: #fff;
+  color: var(--white);
   font-size: 1rem;
 }
-
+.btn-menu {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+.main-nav {
+  background: var(--grey);
+  width: 0;
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  right: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.main-nav li {
+  text-align: center;
+  margin: 2rem 0;
+}
+.main-nav a {
+  display: block;
+}
+.main-nav.open-menu {
+  width: 100%;
+}
 /* 
 HERO
 ================================================ */
 #hero {
+  background-color: var(--light-blue);
   background-image: url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-blend-mode: screen;
+  animation: bg-color 24s infinite;
   height: 100vh;
   display: flex;
   align-items: center;
+}
+@keyframes bg-color {
+  0% {
+    background-color: var(--light-blue);
+  }
+  12.5% {
+    background-color: var(--blue);
+  }
+  25% {
+    background-color: var(--purple);
+  }
+  37.5% {
+    background-color: var(--pink);
+  }
+  50% {
+    background-color: var(--orange);
+  }
+  62.5% {
+    background-color: var(--yellow);
+  }
+  75% {
+    background-color: var(--light-green);
+  }
+  87.5% {
+    background-color: var(--green);
+  }
+  100% {
+    background-color: var(--light-blue);
+  }
 }
 #hero h1 {
   font-size: 4.5rem;
@@ -76,8 +151,8 @@ HERO
 }
 .hero-date {
   text-align: center;
-  border-top: 3px solid #333;
-  border-bottom: 3px solid #333;
+  border-top: 3px solid var(--grey);
+  border-bottom: 3px solid var(--grey);
   padding: 0.5rem 0;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -90,7 +165,11 @@ ABOUT
   padding: 4rem 1rem;
 }
 #about h2 {
-  color: #333;
+  background: linear-gradient(var(--yellow), var(--orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 #about p {
   margin-bottom: 2rem;
@@ -99,11 +178,17 @@ ABOUT
 /*
 NEWS
 ================================================ */
+#news {
+  background-image: linear-gradient(var(--light-green), var(--green));
+  padding: 7rem 0;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+}
 #news h2 {
-  color: #333;
+  color: var(--grey);
 }
 .news-table {
-  color: #333;
+  color: var(--grey);
   width: 100%;
 }
 .news-table tr {
@@ -137,7 +222,7 @@ SPEAKERS
   margin-left: 1rem;
 }
 #speakers h2 {
-  color: #333;
+  color: var(--grey);
 }
 #speakers h3 {
   font-size: 1.5rem;
@@ -151,29 +236,32 @@ SPEAKERS
 TICKET
 ================================================ */
 #ticket {
+  background-image: linear-gradient(var(--pink), var(--purple));
   padding: 6rem 1rem 2rem;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
 }
 #ticket h2 {
-  color: #333;
+  color: var(--grey);
 }
 .ticket-form {
   max-width: 480px;
   margin: 0 auto 5rem;
 }
 .ticket-form label {
-  color: #333;
+  color: var(--grey);
   display: block;
   margin-bottom: 0.5rem;
 }
 .ticket-field {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   padding: 1rem;
   width: 100%;
   margin-bottom: 1.5rem;
 }
 .ticket-btn {
-  background: #333;
-  color: #fff;
+  background: var(--grey);
+  color: var(--white);
   display: block;
   width: 100%;
   padding: 1rem;
@@ -189,7 +277,7 @@ FOOTER
   padding-top: 2rem;
   text-align: center;
   font-size: 0.875rem;
-  color: #333;
+  color: var(--grey);
 }
 .footer a {
   text-decoration: none;
@@ -205,8 +293,23 @@ DESKTOP SIZE
     letter-spacing: 10px;
   }
   /* Header */
+  .btn-menu {
+    display: none;
+  }
   .main-nav {
     width: 100%;
+    display: flex;
+  }
+  .main-nav li {
+    margin: 0 0 0 1.5rem;
+  }
+  /* Header */
+  .btn-menu {
+    display: none;
+  }
+  .main-nav {
+    width: 100%;
+    position: static;
     display: flex;
   }
   .main-nav li {
